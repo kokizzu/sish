@@ -7,19 +7,18 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Set outputs
         id: vars
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-      - uses: actions/setup-go@v4
+      - uses: actions/setup-go@v6
         with:
-          go-version: 1.24
+          go-version: 1.25
       - name: build docs site
         run: make ssg
       - name: publish to pgs
-        uses: picosh/pgs-action@v3
+        uses: picosh/pgs-action@v5
         with:
-          user: hey
           key: ${{ secrets.PRIVATE_KEY }}
           src: './docs/public/'
           project: "sish-${{ steps.vars.outputs.sha_short }}"
