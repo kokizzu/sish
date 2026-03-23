@@ -23,4 +23,4 @@ leveraging SSH to make the connections that the `ngrok` cli would use.
 
 If you have any questions or comments, feel free to reach out via email
 [me@antoniomika.me](mailto:me@antoniomika.me) or on libera IRC
-[#sish](https://web.libera.chat/#sish)
+[#sish](https://web.libera.chat/#sish) / [#pico.sh](https://web.libera.chat/#pico.sh)
